@@ -1,0 +1,109 @@
+/* Container and Background */
+.container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #0d0d0d;
+  overflow: hidden;
+  padding: 3rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Grid animation */
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(#3dd5f3 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+  background-position: center;
+  opacity: 0.15;
+  animation: gridMove 40s linear infinite;
+  z-index: 0;
+}
+
+@keyframes gridMove {
+  0% {
+    background-position: center;
+  }
+  100% {
+    background-position: 120px 120px;
+  }
+}
+
+/* Overlay gradient */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #0d0d0d 30%, transparent 80%);
+  z-index: 1;
+}
+
+/* Project Section */
+.projectsSection {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #3dd5f3;
+  letter-spacing: 1px;
+}
+
+/* Card Style */
+.projectCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  margin: 0 auto;
+  max-width: 700px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(61, 213, 243, 0.3);
+}
+
+.projectCard h3 {
+  color: #f8b400;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.projectCard p {
+  color: #ccc;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.projectCard a {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  background-color: #3dd5f3;
+  color: #0d0d0d;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px #3dd5f3;
+}
+
+.projectCard a:hover {
+  background-color: #29b3cf;
+  box-shadow: 0 0 20px #3dd5f3, 0 0 30px #3dd5f3 inset;
+  transform: scale(1.05);
+}
